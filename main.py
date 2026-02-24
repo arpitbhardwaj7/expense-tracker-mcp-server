@@ -35,6 +35,6 @@ def list_expenses():
         cols = [d[0] for d in cur.description]
         return [dict(zip(cols, r)) for r in cur.fetchall()]
 
-if __name__ == "__main":
+if __name__ == "__main__":
     # mcp.run()    # By default, transport is "stdio"
-    mcp.run(transport = "http", host = "0.0.0.0", port = 8000)
+    mcp.run(transport = "streamable-http", host = "0.0.0.0", port = 8005)
